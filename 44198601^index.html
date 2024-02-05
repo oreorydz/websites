@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Robot{
+            constructor (Imie,Symbol,Producent,Ilosc_operacji){
+                this.Imie=Imie;
+                this.Ilosc_operacji=Ilosc_operacji;
+                this.Producent=Producent;
+                this.Symbol=Symbol;
+            }
+            przedstawSie(){
+                document.write("Jestem "+this.Imie+". Moj symbol fabryczny to: "+this.Symbol+". Wyprodukowal mnie "+this.Producent);
+            }
+            Wydajnosc(czas_pracy){
+                return czas_pracy+this.Ilosc_operacji;
+            }
+        }
+
+        rob1 = new Robot("Android","SX-105C","Corpo2 S.A.",5);
+        rob2 = new Robot("Android","SX-105C","Corpo2 S.A.",3);
+        rob3 = new Robot("Android","SX-105C","Corpo2 S.A.",5);
+
+        rob1.przedstawSie();
+        document.write("<br>"+"Moja wydajnosc to: "+rob2.Wydajnosc(3))
+
+    </script>
+</body>
+</html>
